@@ -1,16 +1,6 @@
 package testunitaire;
 
-import static org.junit.Assert.*;
-
-import java.util.HashMap;
-import java.util.IdentityHashMap;
-
 import org.junit.Test;
-
-import modele.Intersection;
-import modele.Plan;
-import modele.Troncon;
-import services.LecteurDeXML;
 
 public class LecteurDeXMLTest {
 	

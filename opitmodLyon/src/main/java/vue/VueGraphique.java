@@ -90,6 +90,24 @@ public class VueGraphique extends Parent implements Observer{
             }
         });
 		
+		livraisonGroup.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            public void handle(final MouseEvent event) {
+                if(event.getTarget() instanceof PointLivraisonVue) {
+                	PointLivraisonVue temp = (PointLivraisonVue)event.getTarget();
+                	compagnie.setTabIdLivraison(temp.getIdLivraison());
+                }
+            }
+        });
+		
+		entrepotGroup.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            public void handle(final MouseEvent event) {
+                if(event.getTarget() instanceof EntrepotVue) {
+                	EntrepotVue temp = (EntrepotVue)event.getTarget();
+                	compagnie.setTabIdEntrepot(temp.getIdEntrepot());
+                }
+            }
+        });
+		
 		
 	}
 	

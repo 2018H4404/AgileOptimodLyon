@@ -84,7 +84,7 @@ public class ApplicationDemo extends Application{
 	         @Override
 	         public void handle(ActionEvent event) {
 	        	
-	        	FileChooser fileChooser = new FileChooser();
+	           FileChooser fileChooser = new FileChooser();
                FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("XML Fichiers", "*.xml");
                fileChooser.getExtensionFilters().add(extFilter);
                File file = fileChooser.showOpenDialog(primaryStage);
@@ -115,49 +115,13 @@ public class ApplicationDemo extends Application{
         menuFile.getItems().addAll(itemChargerPlan,itemChargerDemandeLivraison);
  
       //Ajout de l'onglet Opération
-        menuOperation = new Menu("Opération");
+        menuOperation = new Menu("Operation");
         
       //Ajout de l'onglet View(Composant prevu pour apres)
         menuView = new Menu("View");
         
         menuBar.getMenus().addAll(menuFile, menuOperation, menuView);
-		////////////////////////////////////
-        //Code abandonnee
-		/*Group buttonGroup = new Group();
-		Button btnChargerPlan = new Button("Charger Plan");
-		//Position du bouton
-		btnChargerPlan.setLayoutX(0);
-		btnChargerPlan.setLayoutY(0);
-		btnChargerPlan.setOnAction(new EventHandler<ActionEvent>() {
-			 
-	         @Override
-	         public void handle(ActionEvent event) {
-	        	
-	        	FileChooser fileChooser = new FileChooser();
-                FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("XML Fichiers", "*.xml");
-                fileChooser.getExtensionFilters().add(extFilter);
-                File file = fileChooser.showOpenDialog(primaryStage);
-                LecteurDeXML.getInstance().lecturePlanXML(file);
-	         }
-	      });
-		Button btnChargerDemandeLivraison = new Button("Charger DemandeLivraison");
-		//Position du bouton
-		btnChargerDemandeLivraison.setLayoutX(0);
-		btnChargerDemandeLivraison.setLayoutY(0);
-		btnChargerDemandeLivraison.setOnAction(new EventHandler<ActionEvent>() {
-			 
-	         @Override
-	         public void handle(ActionEvent event) {
-	        	
-	        	FileChooser fileChooser = new FileChooser();
-                FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("XML Fichiers", "*.xml");
-                fileChooser.getExtensionFilters().add(extFilter);
-                File file = fileChooser.showOpenDialog(primaryStage);
-                LecteurDeXML.getInstance().lectureLivraisonEntrepotXML(file);
-	         }
-	      });
-		buttonGroup.getChildren().add(btnChargerPlan);
-		buttonGroup.getChildren().add(btnChargerDemandeLivraison);*/
+		
 		pane.setTop(menuBar);
 	}
 	

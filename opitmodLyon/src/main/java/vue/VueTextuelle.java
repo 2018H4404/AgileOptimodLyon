@@ -61,6 +61,14 @@ public class VueTextuelle extends Parent implements Observer{
 		monLabel.setText(nomRue);
 	}
 	
+	public void setTabIdLivraison(double id){
+		monLabel.setText(id+"");   //cast double to string
+	}
+	
+	public void setTabIdEntrepot(double id){
+		monLabel.setText(id+"");   //cast double to string
+	}
+	
 	@Override
 	public void update(Observable arg0, Object arg1) {
 		// TODO Auto-generated method stub
